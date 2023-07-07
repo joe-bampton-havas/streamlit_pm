@@ -56,3 +56,4 @@ number = st.slider(
     0,
     100,
     )
+    
