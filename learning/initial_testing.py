@@ -37,9 +37,6 @@ st.write("""
 Hello *world!*
 """)
 
-# steamlit line chart
-st.line_chart(df.set_index('date'))
-
 # steamlit selectbox
 option = st.selectbox(
     "Pick an animal",
@@ -58,4 +55,6 @@ number = st.slider(
     0,
     100,
     )
-    
+
+# steamlit line chart
+st.line_chart(df.set_index('date'))
