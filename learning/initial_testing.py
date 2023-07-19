@@ -58,4 +58,4 @@ number = st.slider(
     )
 
 # steamlit line chart
-st.line_chart(df)
+st.line_chart(df, x='date', y='value', width=10, height=5)
