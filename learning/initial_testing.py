@@ -26,7 +26,7 @@ noise = np.random.normal(0, 10, len(dates))
 values = trend + month_seasonality + noise
 
 # Create the DataFrame
-df = pd.DataFrame({'date': dates, 'value': values})
+df = pd.DataFrame({'date': dates, 'value': values, 'trend': trend, 'month_seasonality': month_seasonality, 'noise': noise})
 
 # Convert the 'value' column to floating-point numbers
 df['value'] = df['value'].astype(float)
@@ -58,4 +58,10 @@ number = st.slider(
     )
 
 # steamlit line chart
-st.line_chart(df, x='date', y='value', width=1000, height=500)
+st.line_chart(
+    df,
+    x='date',
+    y=['value','trend','month_seasonality','noise'],
+    width=1000,
+    height=500
+    )
