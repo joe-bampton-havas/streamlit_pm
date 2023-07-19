@@ -30,6 +30,7 @@ df = pd.DataFrame({'date': dates, 'value': values})
 
 # Convert the 'value' column to floating-point numbers
 df['value'] = df['value'].astype(float)
+df['date'] = pd.to_datetime(df['date'])
 
 # steamlit code
 st.write("""
