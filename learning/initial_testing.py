@@ -65,7 +65,7 @@ number = st.slider(
 st.line_chart(
     df,
     x='date',
-    y=['value','trend','month_seasonality','noise'],
+    y='value',
     width=1000,
     height=500
     )
