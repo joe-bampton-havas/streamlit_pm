@@ -30,6 +30,10 @@ df = pd.DataFrame({'date': dates, 'value': values, 'trend': trend, 'month_season
 
 # Convert the 'value' column to floating-point numbers
 df['value'] = df['value'].astype(float)
+df['trend'] = df['trend'].astype(float)
+df['month_seasonality'] = df['month_seasonality'].astype(float)
+df['noise'] = df['noise'].astype(float)
+
 df['date'] = pd.to_datetime(df['date'])
 
 # steamlit code
