@@ -28,6 +28,9 @@ values = trend + month_seasonality + noise
 # Create the DataFrame
 df = pd.DataFrame({'date': dates, 'value': values})
 
+# Convert the 'value' column to floating-point numbers
+df['value'] = df['value'].astype(float)
+
 # steamlit code
 st.write("""
 # My first app
